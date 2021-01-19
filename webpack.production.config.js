@@ -2,11 +2,14 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: {
+    app: './src/index.jsx',
+    globalVars: './globalVars.js'
+  },
 
   output: {
     path: path.resolve('./dist'),
-    filename: 'app.js',
+    filename: '[name].bundle.[contenthash].js',
     library: 'ReactFormBuilder',
     libraryTarget: 'umd',
     umdNamedDefine: true,

@@ -5,7 +5,7 @@ import SignaturePad from 'react-signature-canvas';
 import ReactBootstrapSlider from 'react-bootstrap-slider';
 
 import StarRating from './star-rating';
-import HeaderBar from './header-bar';
+// import HeaderBar from './header-bar';
 import DatePicker from './date-picker';
 import ComponentHeader from './component-header';
 import ComponentLabel from './component-label';
@@ -501,28 +501,28 @@ class RadioButtons extends React.Component {
   }
 }
 
-class Image extends React.Component {
-  render() {
-    const style = (this.props.data.center) ? { textAlign: 'center' } : null;
+// class Image extends React.Component {
+//   render() {
+//     const style = (this.props.data.center) ? { textAlign: 'center' } : null;
 
-    let baseClasses = 'SortableItem rfb-item';
-    if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
+//     let baseClasses = 'SortableItem rfb-item';
+//     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return (
-      <div className={baseClasses} style={style}>
-        { !this.props.mutable &&
-          <HeaderBar parent={this.props.parent} editModeOn={this.props.editModeOn} data={this.props.data} onDestroy={this.props._onDestroy} onEdit={this.props.onEdit} required={this.props.data.required} />
-        }
-        { this.props.data.src &&
-          <img src={this.props.data.src} width={this.props.data.width} height={this.props.data.height} />
-        }
-        { !this.props.data.src &&
-          <div className="no-image">No Image</div>
-        }
-      </div>
-    );
-  }
-}
+//     return (
+//       <div className={baseClasses} style={style}>
+//         { !this.props.mutable &&
+//           <HeaderBar parent={this.props.parent} editModeOn={this.props.editModeOn} data={this.props.data} onDestroy={this.props._onDestroy} onEdit={this.props.onEdit} required={this.props.data.required} />
+//         }
+//         { this.props.data.src &&
+//           <img src={this.props.data.src} width={this.props.data.width} height={this.props.data.height} />
+//         }
+//         { !this.props.data.src &&
+//           <div className="no-image">No Image</div>
+//         }
+//       </div>
+//     );
+//   }
+// }
 
 class Rating extends React.Component {
   constructor(props) {
@@ -760,7 +760,7 @@ FormElements.Signature = Signature;
 FormElements.Checkboxes = Checkboxes;
 FormElements.DatePicker = DatePicker;
 FormElements.RadioButtons = RadioButtons;
-FormElements.Image = Image;
+// FormElements.Image = Image;
 FormElements.Rating = Rating;
 FormElements.Tags = Tags;
 FormElements.HyperLink = HyperLink;
